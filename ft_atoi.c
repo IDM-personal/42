@@ -1,4 +1,17 @@
-char *ft_atoi(char *str)
+int ft_atoi(char *str)
+{
+	int i = 0;
+}
+
+int ft_strlen(char *str)
+{
+	int i = 0;
+	while(str[i] != '\0')
+		i++;
+	return (i);
+}
+
+char *cadgen(char *str)
 {
 	int i = 0;
 	int neg = 0;
@@ -20,9 +33,8 @@ char *ft_atoi(char *str)
 	org = i;
 	while(str[i] != '\0')
 	{
-		if(str[i] >= '0' && str[i] <= '9')
+		if(str[i] < '0' || str[i] > '9')
 		{
-		}else{
 			str[i] = '\0';
 			break;
 		}
@@ -33,7 +45,7 @@ char *ft_atoi(char *str)
 
 int main()
 {
-	char *str ="          ---++++++++---2136465af48787956464";
+	char str[50] ="          ---++++++++---2136465af48787956464";
 	printf("%s",ft_atoi(str));
 }
 
