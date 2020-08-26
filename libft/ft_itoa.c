@@ -6,14 +6,14 @@
 /*   By: idelgado <idelgado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/09 05:57:42 by idelgado          #+#    #+#             */
-/*   Updated: 2020/08/11 10:09:06 by idelgado         ###   ########.fr       */
+/*   Updated: 2020/08/13 09:16:13 by idelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-char	*nbrlen(long n)
+static char		*nbrlen(long n)
 {
 	int		res;
 	char	*cad;
@@ -34,7 +34,7 @@ char	*nbrlen(long n)
 	return (cad);
 }
 
-char	*ft_rev(char *cad)
+static char		*ft_rev(char *cad)
 {
 	int		i;
 	char	sv;
@@ -52,7 +52,7 @@ char	*ft_rev(char *cad)
 	return (cad);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char			*cad;
 	int				i;

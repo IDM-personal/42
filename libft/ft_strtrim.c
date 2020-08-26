@@ -6,13 +6,13 @@
 /*   By: idelgado <idelgado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 11:02:39 by idelgado          #+#    #+#             */
-/*   Updated: 2020/08/10 12:19:46 by idelgado         ###   ########.fr       */
+/*   Updated: 2020/08/13 09:15:26 by idelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			inset(char c, char const *set)
+static int			inset(char c, char const *set)
 {
 	int		i;
 
@@ -26,7 +26,7 @@ int			inset(char c, char const *set)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char				*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	char	*cad;

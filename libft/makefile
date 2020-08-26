@@ -6,12 +6,11 @@
 #    By: idelgado <idelgado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/08 13:05:45 by idelgado          #+#    #+#              #
-#    Updated: 2020/08/12 10:22:45 by idelgado         ###   ########.fr        #
+#    Updated: 2020/08/13 10:44:18 by idelgado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft
-SRC = *.c
 SRC_OP1 = 	ft_atoi.c  	 		\
 			ft_bzero.c 	 		\
 			ft_calloc.c  		\
@@ -61,7 +60,7 @@ LIBNAME = libft.a
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC_OP1) $(SRC_OP2)
+	gcc -c $(CFLAGS) $(SRC_OP1) $(SRC_OP2)
 	ar rc $(LIBNAME) *.o
 	ranlib $(LIBNAME)
 clean:
@@ -70,9 +69,9 @@ clean:
 fclean: clean
 	rm -f *.a
 bonus:
-	gcc -c $(BONUS)
+	gcc -c $(CFLAGS) $(SRC_OP1) $(SRC_OP2) $(BONUS)
 	ar rc $(LIBNAME) *.o
 	ranlib $(LIBNAME)
 re: fclean all
 
-.PHONY: all clean fclean re $(NAME)
+.PHONY: all clean fclean re bonus

@@ -6,13 +6,13 @@
 /*   By: idelgado <idelgado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 09:52:37 by idelgado          #+#    #+#             */
-/*   Updated: 2020/08/12 12:58:23 by idelgado         ###   ########.fr       */
+/*   Updated: 2020/08/13 09:15:55 by idelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ncadenas(char const *s, char c)
+static int			ncadenas(char const *s, char c)
 {
 	int		cadn;
 	int		i;
@@ -37,7 +37,7 @@ int			ncadenas(char const *s, char c)
 	return (cadn);
 }
 
-int			cadlen(char const *cad, char c, int i)
+static int			cadlen(char const *cad, char c, int i)
 {
 	int	len;
 
@@ -50,7 +50,7 @@ int			cadlen(char const *cad, char c, int i)
 	return (len);
 }
 
-char		**gen(char **tabla, int ncad, char c, char const *s)
+static char			**gen(char **tabla, int ncad, char c, char const *s)
 {
 	int		i;
 	int		charit;
@@ -75,7 +75,7 @@ char		**gen(char **tabla, int ncad, char c, char const *s)
 	return (tabla);
 }
 
-char		**ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
 	char	**tabla;
 	int		ncad;

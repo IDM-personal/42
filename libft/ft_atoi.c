@@ -6,13 +6,13 @@
 /*   By: idelgado <idelgado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/23 11:24:32 by idelgado          #+#    #+#             */
-/*   Updated: 2020/08/12 13:15:20 by idelgado         ###   ########.fr       */
+/*   Updated: 2020/08/13 12:39:54 by idelgado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long unsigned int	nbrcreator(int i, int len, char *str)
+static long unsigned int		nbrcreator(int i, int len, char *str)
 {
 	long unsigned int	rtr;
 	int					nbrpos;
@@ -33,7 +33,7 @@ long unsigned int	nbrcreator(int i, int len, char *str)
 	return (rtr);
 }
 
-int					negat(char ch)
+static int						negat(char ch)
 {
 	if (ch == 45)
 		return (1);
@@ -42,7 +42,7 @@ int					negat(char ch)
 	return (0);
 }
 
-int					off(char *str)
+static int						off(char *str)
 {
 	int i;
 
@@ -65,12 +65,12 @@ int					off(char *str)
 	return (0);
 }
 
-int					retorna(int negatval, int len, int i, char *str)
+static int						retorna(int negatval, int len, int i, char *str)
 {
 	int of;
 
 	of = off(str);
-	if (len == 0)
+	if (len == 0 && ft_strlen(str) == 0)
 		return (0);
 	if (negatval == 1)
 		i = negatval + of;
@@ -82,7 +82,7 @@ int					retorna(int negatval, int len, int i, char *str)
 	return (nbrcreator(i, len + i + 1, str));
 }
 
-int					ft_atoi(const char *str)
+int								ft_atoi(const char *str)
 {
 	int		i;
 	int		len;
